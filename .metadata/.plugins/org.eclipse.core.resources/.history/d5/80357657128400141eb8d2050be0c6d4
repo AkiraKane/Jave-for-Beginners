@@ -1,0 +1,15 @@
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		App app = new App();
+		
+		int value2 = 7;
+		app.show(value2);
+	}
+
+	public void show(int value){
+		System.out.println("Value is "+value);
+	}
+}

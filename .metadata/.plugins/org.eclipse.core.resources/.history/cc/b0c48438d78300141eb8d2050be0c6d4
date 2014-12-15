@@ -1,0 +1,14 @@
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int values = 4;
+		calculate(value);
+		System.out.println(value);
+	}
+	private static void calculate(int value){
+		value = value-1;
+		System.out.println(value);
+	}
+}
