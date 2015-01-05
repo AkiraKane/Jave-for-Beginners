@@ -1,0 +1,22 @@
+interface Executable{
+	void execute();
+}
+
+
+class Runner{
+	public void run(Executable e){
+		System.out.println("Executeing code block...");
+		e.execute();
+		
+	}
+}
+
+public class App {
+
+	public static void main(String[] args) {
+		Runner runner = new Runner();
+		runner.run();
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+import java.util.Queue;
+import java.util.concurrent.ArrayBlockingQueue;
+
+
+public class App {
+
+	public static void main(String[] args) {
+		// (head)<- oooooooooooooooooooooooooo  <-(tail) FIFO(first in, first out)
+		Queue<Integer> q1 = new ArrayBlockingQueue<Integer>(3);
+		
+		q1.add(10);
+		q1.add(20);
+		q1.add(30);
+		
+		try {
+			q1.add(40);
+		} catch (IllegalStateException e) {
+			System.out.println("Tried to add too many items to the queue");
+		}
+		
+	}
+
+}

@@ -1,0 +1,74 @@
+interface Executable {
+	int execute(int a);
+}
+
+class Runner {
+	public void run(Executable e) {
+		System.out.println("Executeing code block...");
+		int value = e.execute(12);
+		System.out.println("Return value is: "+value);
+
+	}
+
+}
+
+// () -> System.out.println("Hello there.");
+
+/*
+ * () -> { System.out.println("THis is code passed in a lambda expression.");
+ * System.out.println("Hello there."); }
+ */
+
+/*
+ () -> {
+			System.out.println("THis is code passed in a lambda expression.");
+			System.out.println("Hello there.");
+			return 8;
+		}
+ */
+
+/*
+ () -> {
+			return 8;
+		}
+ */
+
+// () -> 8
+
+// (int a) ->8
+
+/*
+ (int a) ->{
+			System.out.println("Hello there.");
+			return 7+a;
+		}
+ */
+
+/*
+ (a) ->{
+			System.out.println("Hello there.");
+			return 7+a;
+		}
+ */
+public class App {
+
+	public static void main(String[] args) {
+		Runner runner = new Runner();
+		runner.run(new Executable() {
+
+			public int execute(int a ) {
+				System.out.println("Hello there.");
+				return 7+a;
+			}
+
+		});
+
+		System.out.println("===========================");
+
+		runner.run((a) ->{
+			System.out.println("Hello there.");
+			return 7+a;
+		});
+
+	}
+}

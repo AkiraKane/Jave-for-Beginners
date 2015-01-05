@@ -1,0 +1,25 @@
+import java.util.LinkedList;
+
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		LinkedList<String> animals = new LinkedList<String>();
+		
+		animals.add("fox");
+		animals.add("cat");
+		animals.add("dog");
+		animals.add("rabbit");
+		
+		Iterator it = animals.iterator();
+		
+		///Modern iteration,  Java 5 and Later
+		
+		for(String animal: animals){
+			System.out.println(animal);
+		}
+
+	}
+
+}
